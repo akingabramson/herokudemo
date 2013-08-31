@@ -1,6 +1,5 @@
 class RootController < ApplicationController
   def index
-    mail( :to => "a.kingabramson@gmail.com",
-    :subject => 'Thanks for signing up' )
+    Notifier.signup_email.deliver
   end
 end
